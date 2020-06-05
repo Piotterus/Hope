@@ -1,0 +1,22 @@
+{% extends 'baseLayout.html' %}
+
+{% block content %}
+<div class="Home">
+  <p>This is List Prizes</p>
+  <div class="list">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Nazwa</th>
+      </tr>
+      {% for prize in prizes %}
+      <tr>
+        <td><a href="{% url 'prizes:detail' id=prize.id %}">{{ prize.id }}<a/></td>
+        <td>{{ prize.name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+</div>
+{% endblock %}

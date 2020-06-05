@@ -1,0 +1,14 @@
+{% extends 'baseLayout.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="create-order">
+  <h2>Stwórz nową nagrodę</h2>
+  <form class="site-form" action="{% url 'prizes:create' %}" method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" name="" value="Create">
+  </form>
+</div>
+{% endblock %}

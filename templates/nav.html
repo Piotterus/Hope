@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+ <!-- Brand -->
+ <a class="navbar-brand" href="{% url 'home' %}">HOPE 2020</a>
+
+ <!-- Links -->
+ <ul class="navbar-nav w-100 justify-content-start">
+   <!-- Dropdown -->
+   <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+       Zamówienia
+     </a>
+     <div class="dropdown-menu">
+       <a class="dropdown-item" href="{% url 'orders:list' %}">Lista</a>
+       <a class="dropdown-item" href="{% url 'orders:create' %}">Stwórz</a>
+     </div>
+   </li>
+   <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+       Nagrody
+     </a>
+     <div class="dropdown-menu">
+       <a class="dropdown-item" href="{% url 'orders:list' %}">Lista</a>
+       <a class="dropdown-item" href="{% url 'orders:create' %}">Stwórz</a>
+     </div>
+   </li>
+   <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+       Klienci
+     </a>
+     <div class="dropdown-menu">
+       <a class="dropdown-item" href="{% url 'orders:list' %}">Lista</a>
+       <a class="dropdown-item" href="{% url 'orders:create' %}">Stwórz</a>
+     </div>
+   </li>
+   <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+       Wysyłka
+     </a>
+     <div class="dropdown-menu">
+       <a class="dropdown-item" href="{% url 'orders:list' %}">Lista</a>
+       <a class="dropdown-item" href="{% url 'orders:create' %}">Stwórz</a>
+     </div>
+   </li>
+  </ul>
+
+    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+      <li class="nav-item nav-right">
+      <a class="nav-link" href="{% url 'accounts:login' %}">Zaloguj</a>
+      </li>
+    </ul>
+</nav>
+
+{% comment %}
+<nav>
+  <ul>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Zamówienia</a>
+    <div class="dropdown-content">
+      <a href="{% url 'orders:list' %}">Lista</a>
+      <a href="{% url 'orders:create' %}">Stwórz</a>
+    </div>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Nagrody</a>
+    <div class="dropdown-content">
+      <a href="{% url 'prizes:list' %}">Lista</a>
+      <a href="{% url 'prizes:create' %}">Stwórz</a>
+    </div>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Klienci</a>
+    <div class="dropdown-content">
+      <a href="{% url 'clients:list' %}">Lista</a>
+      <a href="{% url 'clients:create' %}">Stwórz</a>
+    </div>
+    <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Wysyłka</a>
+    <div class="dropdown-content">
+      <a href="{% url 'shipment:list' %}">Lista</a>
+      <a href="{% url 'shipment:create' %}">Stwórz</a>
+    </div>
+    </li>
+    <li style="float: right"><a href="{% url 'accounts:login' %}">Zaloguj</a></li>
+  </ul>
+</nav>
+{% endcomment %}

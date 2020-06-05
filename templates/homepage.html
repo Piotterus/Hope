@@ -1,0 +1,24 @@
+{% extends 'baseLayout.html' %}
+
+{% block content %}
+<div class="Home">
+  <p>This is Hope 2020</p>
+  <div class="row">
+    <div class="col-4 mx-auto">
+      <div class="info card card-body mb-2">
+        W systemie mamy {{ orderCount }} zamówień
+      </div>
+    </div>
+    <div class="col-4 mx-auto">
+      <div class="info card card-body mb-2">
+        W systemie mamy {{ prizeCount }} nagród
+      </div>
+    </div>
+    <div class="col-4 mx-auto">
+      <div class="info card card-body mb-2">
+        W systemie mamy {{ clientCount }} klientów
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
