@@ -1,0 +1,17 @@
+{% extends 'baseLayout.html' %}
+
+{% block content %}
+<div class="Home">
+  <p>This is Client Detail</p>
+  <div class="details">
+    <div class="detail">
+      <p class="key">ID</p>
+      <p class="value">{{client.id}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">Klient</p>
+      <p class="value">{{client.name}}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

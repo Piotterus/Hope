@@ -1,0 +1,45 @@
+{% extends 'baseLayout.html' %}
+
+{% block content %}
+<div class="Home">
+  <p>This is Order Detail</p>
+  <div class="details">
+    <div class="detail">
+      <p class="key">ID</p>
+      <p class="value">{{order.id}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">Klient</p>
+      <p class="value">{{order.client}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">Nagroda</p>
+      <p class="value">{{order.prize}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">Account</p>
+      <p class="value">{{order.account}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">Ilość</p>
+      <p class="value">{{order.amount}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">Planowana Cena</p>
+      <p class="value">{{order.plannedValue}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">DeadLine</p>
+      <p class="value">{{order.deadline}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">Co dalej</p>
+      <p class="value">{{order.doNext}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">Komentarz</p>
+      <p class="value">{{order.comment}}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

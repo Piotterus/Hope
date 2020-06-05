@@ -1,0 +1,53 @@
+{% extends 'baseLayout.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="create-order">
+  <h2>Stwórz nowe zamówienie</h2>
+  <form class="site-form" action="{% url 'orders:create' %}" method="post">
+    {% csrf_token %}
+    <div class="fieldWrapper row">
+      <div class="col-6">
+      {{ form.id_client.errors }}
+      {{ form.id_client|as_crispy_field }}
+      </div>
+      <div class="col-6">
+      {{ form.new_client.errors }}
+      {{ form.new_client|as_crispy_field }}
+      </div>
+    </div>
+    <div class="fieldWrapper row">
+      <div class="col-6">
+      {{ form.id_prize.errors }}
+      {{ form.id_prize|as_crispy_field }}
+      </div>
+      <div class="col-6">
+      {{ form.new_prize.errors }}
+      {{ form.new_prize|as_crispy_field }}
+      </div>
+    </div>
+    <div class="fieldWrapper">
+    {{ form.amount.errors }}
+    {{ form.amount|as_crispy_field }}
+    </div>
+    <div class="fieldWrapper">
+    {{ form.comment.errors }}
+    {{ form.comment|as_crispy_field }}
+    </div>
+    <div class="fieldWrapper">
+    {{ form.plannedValue.errors }}
+    {{ form.plannedValue|as_crispy_field }}
+    </div>
+    <div class="fieldWrapper">
+    {{ form.deadline.errors }}
+    {{ form.deadline|as_crispy_field }}
+    </div>
+    <div class="fieldWrapper">
+    {{ form.doNext.errors }}
+    {{ form.doNext|as_crispy_field }}
+    </div>
+    <input type="submit" name="" value="Create">
+  </form>
+</div>
+{% endblock %}

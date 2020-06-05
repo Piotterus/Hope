@@ -1,0 +1,17 @@
+{% extends 'baseLayout.html' %}
+
+{% block content %}
+<div class="Home">
+  <p>This is Order Detail</p>
+  <div class="details">
+    <div class="detail">
+      <p class="key">ID</p>
+      <p class="value">{{prize.id}}</p>
+    </div>
+    <div class="detail">
+      <p class="key">Nazwa</p>
+      <p class="value">{{prize.name}}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

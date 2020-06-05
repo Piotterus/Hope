@@ -1,0 +1,33 @@
+{% extends 'baseLayout.html' %}
+
+{% block content %}
+<div class="Home">
+  <p>This is List Prizes</p>
+  <div class="list">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Klient</th>
+        <th>Nagroda</th>
+        <th>Account</th>
+        <th>Ilość</th>
+        <th>Planowana Cena</th>
+        <th>DeadLine</th>
+        <th>Co dalej</th>
+      </tr>
+      {% for order in orders %}
+      <tr>
+        <td><a href="{% url 'orders:detail' id=order.id %}">{{ order.id }}<a/></td>
+        <td>{{ order.client }}</td>
+        <td>{{ order.prize }}</td>
+        <td>{{ order.account }}</td>
+        <td>{{ order.amount }}</td>
+        <td>{{ order.plannedValue }}</td>
+        <td>{{ order.deadline }}</td>
+        <td>{{ order.doNext }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}
